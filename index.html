@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOUAI ACADEMY - المنصة التعليمية المتكاملة (1 ثانوي)</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --accent-chem: #06b6d4;
+            --accent-bio: #22c55e;
+            --accent-math: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
+        .container { background: var(--card-bg); border: 1px solid rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); max-width: 800px; width: 100%; text-align: center; }
+        h1 { color: var(--primary); margin-bottom: 8px; font-size: 2.2rem; }
+        p.subtitle { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; }
+        .badges-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .badge { padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+        .badge-phys { background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid #6366f1; }
+        .badge-chem { background: rgba(6, 182, 212, 0.2); color: #38bdf8; border: 1px solid #06b6d4; }
+        .badge-bio { background: rgba(34, 197, 94, 0.2); color: #4ade80; border: 1px solid #22c55e; }
+        .badge-math { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+        textarea { width: 100%; height: 280px; background: #090d16; color: #38bdf8; border: 1px solid #334155; border-radius: 8px; padding: 12px; font-family: monospace; resize: none; margin-bottom: 20px; font-size: 0.85rem; text-align: left; direction: ltr; }
+        .copy-btn { background-color: var(--primary); color: white; border: none; padding: 14px 28px; font-size: 1.05rem; font-weight: bold; border-radius: 8px; cursor: pointer; transition: background 0.3s, transform 0.1s; display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; }
+        .copy-btn:hover { background-color: var(--primary-hover); }
+        .copy-btn:active { transform: scale(0.98); }
+        .toast { margin-top: 15px; color: #22c55e; font-weight: bold; opacity: 0; transition: opacity 0.3s ease; }
+        .toast.show { opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>LOUAI ACADEMY 🚀</h1>
+        <p class="subtitle">المنصة التعليمية الشاملة والمصممة لمواد العلوم الفيزيائية والكيمياء، العلوم الطبيعية، والرياضيات (1 ثانوي)</p>
+        
+        <div class="badges-container">
+            <span class="badge badge-phys">⚛️ الفيزياء</span>
+            <span class="badge badge-chem">🧪 الكيمياء</span>
+            <span class="badge badge-bio">🧬 علوم الطبيعة والحيـاة</span>
+            <span class="badge badge-math">📐 الرياضيات</span>
+        </div>
+
+        <textarea id="academyFullApp" readonly>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOUAI ACADEMY - 1 AS</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #6366f1;
+            --chem: #06b6d4;
+            --bio: #22c55e;
+            --math: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background: var(--bg-dark); color: var(--text-main); padding: 20px; line-height: 1.6; }
+        header { text-align: center; padding: 25px 10px; border-bottom: 1px solid #334155; margin-bottom: 25px; }
+        header h1 { color: var(--primary); font-size: 2.2rem; }
+        header p { color: var(--text-muted); }
+        
+        .nav-tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+        .tab-btn { background: #334155; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .tab-btn.active-phys { background: var(--primary); }
+        .tab-btn.active-chem { background: var(--chem); color: black; }
+        .tab-btn.active-bio { background: var(--bio); color: black; }
+        .tab-btn.active-math { background: var(--math); color: black; }
+
+        .tab-content { display: none; background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
+        .tab-content.active { display: block; }
+
+        h2 { margin-bottom: 15px; border-bottom: 2px solid; padding-bottom: 5px; }
+        .card { background: #0f172a; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-right: 4px solid; }
+        
+        /* ألوان التخصصات */
+        .phys-theme { color: #818cf8; border-color: #6366f1; }
+        .chem-theme { color: #38bdf8; border-color: #06b6d4; }
+        .bio-theme { color: #4ade80; border-color: #22c55e; }
+        .math-theme { color: #fbbf24; border-color: #f59e0b; }
+
+        ul { margin-right: 20px; margin-bottom: 10px; }
+        li { margin-bottom: 6px; }
+
+        .calc-box { background: #1a2332; padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px solid #334155; }
+        input { background: #0f172a; border: 1px solid #334155; color: white; padding: 8px; border-radius: 6px; width: 100%; margin-bottom: 10px; }
+        button.calc-btn { color: black; font-weight: bold; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; width: 100%; }
+        .result-box { margin-top: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LOUAI ACADEMY 🎓</h1>
+        <p>المرجع التفاعلي الشامل لدروس وقوانين 1 ثانوي (علوم وتكنولوجيا)</p>
+    </header>
+
+    <div class="nav-tabs">
+        <button class="tab-btn active-phys" onclick="openTab('phys', this, 'active-phys')">⚛️ الفيزياء والميكانيك</button>
+        <button class="tab-btn" onclick="openTab('chem', this, 'active-chem')">🧪 الكيمياء والمحاليل</button>
+        <button class="tab-btn" onclick="openTab('bio', this, 'active-bio')">🧬 العلوم الطبيعية</button>
+        <button class="tab-btn" onclick="openTab('math', this, 'active-math')">📐 الرياضيات والدوال</button>
+    </div>
+
+    <!-- 1. الفيزياء -->
+    <div id="phys" class="tab-content active">
+        <h2 class="phys-theme">⚛️ القوة والحركات المستقيمة المنحنية (الميكانيك)</h2>
+        <div class="card phys-theme">
+            <h3>مبدأ العطالة (قانون نيوتن الأول)</h3>
+            <p>يحافظ كل جسم على هدوئه أو حركته المستقيمة المنتظمة إذا لم تتداخل أي قوة خارجية لتغيير حالته الحركية ($\sum \vec{F} = \vec{0}$).</p>
+        </div>
+        <div class="card phys-theme">
+            <h3>مميزات الحركة والقوة</h3>
+            <ul>
+                <li><b>الحركة المستقيمة المنتظمة:</b> السرعة ثابتة ($V = const$) وشعاع القوة معدوم ($\vec{F} = \vec{0}$).</li>
+                <li><b>الحركة المستقيمة المتغيرة:</b> شعاع القوة $\vec{F}$ ثابت وله نفس جهة الحركة في التسارع، وعكس جهة الحركة في التباطؤ.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 2. الكيمياء -->
+    <div id="chem" class="tab-content">
+        <h2 class="chem-theme">🧪 كمية المادة والمحاليل المائية</h2>
+        <div class="card chem-theme">
+            <h3>قوانين كمية المادة ($n$) والتركيز</h3>
+            <ul>
+                <li><b>من الكتلة:</b> $n = \frac{m}{M}$ (حيث $m$ بالـ $g$ و $M$ بالـ $g/mol$)</li>
+                <li><b>من حجم الغاز:</b> $n = \frac{V_g}{V_m}$ (في الشرطين النظاميين $V_m = 22.4 \text{ L/mol}$)</li>
+                <li><b>التركيز المولي والكتلي:</b> $C = \frac{n}{V}$ و $C_m = \frac{m}{V}$ حيث $C_m = C \times M$.</li>
+                <li><b>قانون التمديد (التخفيف):</b> $C_1 \times V_1 = C_2 \times V_2$ معامل التمديد $F = \frac{C_1}{C_2} = \frac{V_2}{V_1}$.</li>
+            </ul>
+        </div>
+        <div class="calc-box">
+            <h3 class="chem-theme">حاسبة قانون التمديد ($C_1 V_1 = C_2 V_2$)</h3>
+            <input type="number" id="c1" placeholder="التركيز الابتدائي C1 (mol/L)">
+            <input type="number" id="v1" placeholder="الحجم الابتدائي V1 (L أو mL)">
+            <input type="number" id="c2" placeholder="التركيز النهائي C2 المرغوب (mol/L)">
+            <button class="calc-btn" style="background:var(--chem);" onclick="calcDilution()">حساب الحجم النهائي V2 المطلوب تحضيره</button>
+            <div id="chemRes" class="result-box chem-theme"></div>
+        </div>
+    </div>
+
+    <!-- 3. العلوم الطبيعية -->
+    <div id="bio" class="tab-content">
+        <h2 class="bio-theme">🧬 استعمال المادة وتحويل الطاقة & التحكم العصبي</h2>
+        <div class="card bio-theme">
+            <h3>1. استعمال المادة والتجديد الخلوي</h3>
+            <ul>
+                <li><b>النمو عند النبات:</b> يحدث في القمة النامية (المنطقة المرستيمية للتقسيم + منطقة الاستطالة).</li>
+                <li><b>الانقسام الخيطي المتساوي:</b> يمر بأربع مراحل (تمهيدية، استوائية، انفصالية، ونهائية) للحفاظ على $2n$.</li>
+                <li><b>مصدر المادة:</b> النسغ الكامل عبر الأوعية اللحائية عند النبات المورق، والأغذية الممتصة عند الحيوان.</li>
+            </ul>
+        </div>
+        <div class="card bio-theme">
+            <h3>2. تحويل الطاقة والتحكم العصبي</h3>
+            <ul>
+                <li><b>التنفس والتخمر:</b> التنفس هدم كلي ($2860 \text{ KJ}$)، التخمر هدم جزئي لاهوائي ($120 \text{ KJ}$).</li>
+                <li><b>التحكم العصبي في العضوية:</b> النظام العصبي الودي (مسرّع للوتيرة القلبية) والنظام قرب الودي (مبطئ).</li>
+                <li><b>الرسالة العصبية:</b> كمون الراحة (استقطاب $-70mV$) وكمون العمل (زوال استقطاب $+30mV$).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 4. الرياضيات -->
+    <div id="math" class="tab-content">
+        <h2 class="math-theme">📐 المجموعات العددية والحساب والدوال</h2>
+        <div class="card math-theme">
+            <h3>1. المجموعات العددية والتناظر</h3>
+            <p>$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{D} \subset \mathbb{Q} \subset \mathbb{R}$</p>
+            <p>الكتابة العلمية: $a \times 10^n$ حيث $1 \le |a| < 10$.</p>
+        </div>
+        <div class="card math-theme">
+            <h3>2. الحصر والقيمة المطلقة والدوال المرجعية</h3>
+            <ul>
+                <li><b>المسافة والقيمة المطلقة:</b> $|x - a| \le r \iff x \in [a-r, a+r]$.</li>
+                <li><b>الدوال المرجعية:</b> دالة تآلفية ($ax+b$)، دالة مربع ($x^2$)، دالة المقلوب ($\frac{1}{x}$)، ودالة الجذر ($\sqrt{x}$).</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId, btn, activeClass) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.className = 'tab-btn');
+            
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add(activeClass);
+        }
+
+        function calcDilution() {
+            const c1 = parseFloat(document.getElementById('c1').value);
+            const v1 = parseFloat(document.getElementById('v1').value);
+            const c2 = parseFloat(document.getElementById('c2').value);
+
+            if(!c1 || !v1 || !c2 || c2 >= c1) {
+                document.getElementById('chemRes').innerText = "يرجى أدخال قيم صحيحة (يجب أن يكون C1 أكبر من C2)!";
+                return;
+            }
+            const v2 = (c1 * v1) / c2;
+            const vWater = v2 - v1;
+            document.getElementById('chemRes').innerHTML = `
+                • الحجم النهائي V2 = <b>${v2.toFixed(2)}</b><br>
+                • حجم الماء المقطر الواجب إضافته = <b>${vWater.toFixed(2)}</b>
+            `;
+        }
+    </script>
+</body>
+</html>
+        </textarea>
+
+        <button class="copy-btn" onclick="copyAppCode()">
+            <span>📋 انقر هنا لنسخ كود المنصة كاملاً للنشر (Copy)</span>
+        </button>
+        <div id="toastMessage" class="toast">تم نسخ الكود المدمج بنجاح! جاهز للنشر الآن 🚀</div>
+    </div>
+
+    <script>
+        function copyAppCode() {
+            const textarea = document.getElementById('academyFullApp');
+            textarea.select();
+            textarea.setSelectionRange(0, 99999);
+            
+            navigator.clipboard.writeText(textarea.value).then(() => {
+                const toast = document.getElementById('toastMessage');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }).catch(err => {
+                alert('حدث خطأ في النسخ التلقائي، يرجى تحديد النص ونسخه يدويًا.');
+            });
+        }
+    </script>
+
+</body>
+</html>
